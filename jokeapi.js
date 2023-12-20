@@ -9,10 +9,10 @@ function generate (){
         url: "https://official-joke-api.appspot.com/random_joke",
 
         getdata: function(){
-            fetch(this.url).then((response)=>response.json()).then((data)=>this.dispalydata(data));
+            fetch(this.url).then((response)=>response.json()).then((data)=>this.displaydata(data));
         },
 
-        dispalydata:(data)=>{
+        displaydata:(data)=>{
             const{setup, punchline} = data;
             display.innerHTML = setup;
             result.innerHTML = punchline;
