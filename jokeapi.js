@@ -9,7 +9,9 @@ function generate (){
         url: "https://official-joke-api.appspot.com/random_joke",
 
         getdata: function(){
-            fetch(this.url).then((response)=>response.json()).then((data)=>this.displaydata(data));
+            fetch(this.url)
+            .then((response)=>response.json())
+            .then((data)=>this.displaydata(data));
         },
 
         displaydata:(data)=>{
